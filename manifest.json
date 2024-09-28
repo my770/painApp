@@ -2,7 +2,7 @@
   "name": "Pain Management App",
   "short_name": "PainApp",
   "description": "Birmingham Children's Pain Management App",
-  "start_url": "/index.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#264653",
