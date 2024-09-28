@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Pain Management Team</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+</head>
+
+<body>
+    <header id="header" class="header">
+        <span id="menu" class="menu-icon" onclick="openNav()">&#9776;</span>
+        <h2 id="title">Birmingham Children's Pain Management</h2>
+        
+    </header>
+    <main id="main">
+        <div id="landingPage" class="card">
+            <h3>About</h3>
+            <p>
+                Welcome to the Birmingham Children's Pain Management web app; the app provides information on pain management
+                techniques, including PCA/NCA, regional anaesthesia, and multimodal analgesia.
+            </p>
+           
+            <h3>Contact</h3>
+            <p>
+                For further information or assistance, please contact the Pain Management Team.
+            </p>
+        </div>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#8592;</a>
+            <button class="tablinks" onclick="openTab(event, 'pca')">PCA/NCA</button>
+            <hr>
+            <p class="tablinks" id="orthoTitle"><u>Orthopaedics</u></p>
+            <button class="tablinks" onclick="openTab(event, 'orthoLL')">Lower Limb</button>
+            <button class="tablinks" onclick="openTab(event, 'orthoUL')">Upper Limb</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'urology')">Urology</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'generalSurgery')">General Surgery</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'plasticSurgery')">Plastic Surgery</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'ent')">ENT</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'eyes')">Eyes</button>
+            <hr>
+            <button class="tablinks" onclick="openTab(event, 'nsy')">Neurosurgery</button>
+        </div>
+
+        <!-- PCA/NCA Preparation -->
+        <div id="pca" class="tabcontent card">
+            <h3>PCA/NCA Preparation</h3>
+            <button type="button" class="collapsible"><b>Dose Guidelines</b></button>
+            <div class="content">
+                <table id="doseTable" class="pcaTable">
+                    <tr>
+                        <th>Drug</th>
+                        <th>Dosage</th>
+                    </tr>
+                    <tr>
+                        <td>Morphine</td>
+                        <td>1 mg/kg</td>
+                    </tr>
+                    <tr>
+                        <td>Fentanyl</td>
+                        <td>25 mcg/kg</td>
+                    </tr>
+                    <tr>
+                        <td>Oxycodone</td>
+                        <td>1 mg/kg</td>
+                    </tr>
+                    <tr>
+                        <td>Ketamine</td>
+                        <td>1 mg/kg</td>
+                    </tr>
+                    <tr>
+                        <td>Ketamine (Age under 1 year)</td>
+                        <td>0.5 mg/kg</td>
+                    </tr>
+                </table>
+            </div>
+            <br><br>
+
+            <div id="tables">
+                <button type="button" class="collapsible"><b>NCA &#60; 5 KG</b></button>
+                <div class="content">
+                    <table id="ncaTable4" class="pcaTable">
+                        <tr>
+                            <th>NCA &#60; 5</th>
+                            <th>Suggested</th>
+                            <th>Range</th>
+                        </tr>
+                        <tr>
+                            <td>Continuous</td>
+                            <td>0.2 ml/hr</td>
+                            <td>0 - 0.5 ml/hr</td>
+                        </tr>
+                        <tr>
+                            <td>Bolus</td>
+                            <td>0.5 ml</td>
+                            <td>0.5 ml</td>
+                        </tr>
+                        <tr>
+                            <td>Lockout</td>
+                            <td>30 min</td>
+                            <td>15 - 30 min</td>
+                        </tr>
+                    </table>
+                </div>
+                <br><br>
+                <button type="button" class="collapsible"><b>NCA &#62; 5 KG</b></button>
+                <div class="content">
+                    <table id="ncaTable6" class="pcaTable">
+                        <tr>
+                            <th>NCA &#62; 5</th>
+                            <th>Suggested</th>
+                            <th>Range</th>
+                        </tr>
+                        <tr>
+                            <td>Continuous</td>
+                            <td>0.5 ml/hr</td>
+                            <td>0 - 1 ml/hr</td>
+                        </tr>
+                        <tr>
+                            <td>Bolus</td>
+                            <td>1 ml</td>
+                            <td>0.5 - 1 ml</td>
+                        </tr>
+                        <tr>
+                            <td>Lockout</td>
+                            <td>20 min</td>
+                            <td>20 - 30 min</td>
+                        </tr>
+                    </table>
+                </div>
+                <br><br>
+                <button type="button" class="collapsible"><b>PCA</b></button>
+                <div class="content">
+                    <table id="pcaTable" class="pcaTable">
+                        <tr>
+                            <th>PCA</th>
+                            <th>Suggested</th>
+                            <th>Range</th>
+                        </tr>
+                        <tr>
+                            <td>Continuous</td>
+                            <td>0.2 ml/hr</td>
+                            <td>0 - 1 ml/hr</td>
+                        </tr>
+                        <tr>
+                            <td>Bolus</td>
+                            <td>1 ml</td>
+                            <td>1 ml</td>
+                        </tr>
+                        <tr>
+                            <td>Lockout</td>
+                            <td>5 min</td>
+                            <td>5 - 10 min</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Orthopaedics: Lower Limb -->
+        <div id="orthoLL" class="tabcontent card">
+            <hr>
+            <h3>Lower Limb</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Pelvic and Femoral Osteotomy</b></button>
+            <div class="content">
+                <p><em>Less than 4 years old</em> - single shot caudal and NCA overnight (usually go in a hip spica
+                    after the procedure)</p>
+                <p><em>More than 4 years old</em> - lumbar epidural catheter or ultrasound guided fascia iliaca or
+                    quadratus lumborum block, can then give PRN oramorph or opioid NCA</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Slipped Upper Femoral Epiphysis (SUFE)</b></button>
+            <div class="content">
+                <p>Local anaesthetic infiltration by the surgeon to mobilise patients immediately post-surgery so they
+                    can weight-bear on the affected leg.</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Femoral Fracture Fixation</b></button>
+            <div class="content">
+                <p>USG Fascia Iliaca (FI) block +/- catheter</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Femoral Sarcoma Resection and EPR Insertion</b></button>
+            <div class="content">
+                <p>Either epidural or USG QL catheter or USG FI and sciatic nerve perineural catheters</p>
+            </div>
+
+            <button type="button" class="collapsible"><b>Distal Femur and Tibial 8-Plate Insertion and Removal</b></button>
+            <div class="content">
+                <p>Small pieces of metal and small incisions so LA infiltration by surgeon only</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Knee Arthroscopy</b></button>
+            <div class="content">
+                <p>Adductor canal block and local from the surgeon, or consider iPack block, if ligaments/meniscal work</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Tibial Osteosarcoma Resection and Insertion of EPR</b></button>
+            <div class="content">
+                <p><em>Proximal tibia</em> - either epidural, USG QL or FI and sciatic nerve perineural catheter</p>
+                <p><em>Distal tibia</em> - high USG popliteal sciatic perineural catheter and adductor canal</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Lower Limb Tendon Lengthening, Ankle and Foot Deformity Correction +/-
+                    Osteotomies</b></button>
+            <div class="content">
+                <p><em>Less than 2 years old</em> - Caudal block</p>
+                <p><em>More than 2 years old</em> - USG popliteal sciatic and adductor canal blocks</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Iliac Crest Bone Graft</b></button>
+            <div class="content">
+                <p>The surgeon should site wound infiltration catheter with the appropriate length and LA delivered by elastomeric
+                    pump for 24-36 hours.</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Amputation AKA OR BKA Surgery</b></button>
+            <div class="content">
+                <p>Epidural catheter, QL catheter or FI and Sciatic catheters for 48-72 hours</p>
+            </div>
+        </div>
+            
+         <!-- Orthopaedics: Upper Limb -->
+        <div id="orthoUL" class="tabcontent card">
+            <hr>
+            <h3>Upper Limb</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Shoulder Surgery</b></button>
+            <div class="content">
+                    <p>USG interscalene/ supraclavicular brachial plexus (BP) block</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Humerus Surgery</b></button>
+            <div class="content">
+                <p>USG interscalene/ supraclavicular / infraclavicular BP block</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Supracondylar ORIF</b></button>
+            <div class="content">
+                <p>Can be very painful, discuss with the surgeon whether they are happy for you to do a single-shot BP block. If
+                        not, give morphine and NCA, please.</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Radial, Ulnar, Wrist and Hand Surgeries</b></button>
+            <div class="content">
+                <p>USG axillary BP block +/- catheter depending on the likely length of stay</p>
+                <p>For some hand surgeries, USG single shot blocks of median, radial and ulnar nerves below the elbow in the
+                    forearm. Surgeons also like to do their own blocks, so always discuss with them an intra and post-op
+                    analgesia plan.
+                </p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Manipulation Under Anaesthesia (MUA)</b></button>
+            <div class="content">
+                <p>Fractures are immobilised in casts, blocks generally aren't indicated, paracetamol and ibuprofen are
+                        sufficient.
+                </p>
+            </div>
+        </div>
+            
+        <!-- Urology -->
+        <div id="urology" class="tabcontent card">
+            <hr>
+            <h3>Urology</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Laparoscopic Nephrectomy or Pyeloplasty</b></button>
+            <div class="content">
+                <p>USG paravertebral block or erector spinae block and regular post-operative oral analgesia</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Circumcision</b></button>
+            <div class="content">
+                <p>Less than 2 years old: caudal or penile block</p>
+                <p>More than 2 years old: penile block</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Hypospadias Repair</b></button>
+            <div class="content">
+                <p>Distal hypospadias either caudal or penile block, Proximal hypospadias caudal or penile and pudendal nerve
+                    block to cover the base of the penis.
+                </p>
+                </div>
+            
+            <button type="button" class="collapsible"><b>Penile Torsion and Chordee</b></button>
+            <div class="content">
+                <p>Can involve freeing the penile soft tissue right down onto the scrotum - caudal block is most effective.</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Mitrofanoff and Antegrade Colonic Enema Device (ACE)</b></button>
+            <div class="content">
+                <p><em>Laparoscopic formation</em> - oral analgesia only</p>
+                <p><em>Open Surgery</em> - usually midline vertical incision from just above the umbilicus to symphysis pubis.
+                    Rectus sheath catheters by surgeons and NCA /PCA</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Bladder Augmentation</b></button>
+            <div class="content">
+                <p>Small bowel harvested and used to augment bladder size. Vertical incision from above umbilicus to symphysis
+                    pubis - Rectus sheath catheters by surgeon and NCA/PCA.</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Ureteroscopic Stone Clearance</b></button>
+            <div class="content">
+                <p>Oral analgesia only post-op</p>
+            </div>
+            
+            <button type="button" class="collapsible"><b>Vesicostomy Formation</b></button>
+            <div class="content">
+                <p>Consider caudal or bilateral TAP blocks</p>
+            </div>
+        </div>
+            
+        <!-- General Surgery -->
+        <div id="generalSurgery" class="tabcontent card">
+            <hr>
+            <h3>General Surgery</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Orchidopexy</b></button>
+            <div class="content">
+                <p>USG Ilio-inguinal supra-iliac crest TAP or lateral QL block (plus scrotal incision infiltration by surgeon).
+                    Consider single shot caudal block for &lt2 years and if bilateral procedure.
+                </p>
+            </div>
+            <button type="button" class="collapsible"><b>Herniorrhaphy</b></button>
+            <div class="content">
+                <p>USG Ilio-inguinal TAP or lateral QL block. Consider caudal for &lt2 years and if bilateral procedure.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Laparoscopic Gastrostomy</b></button>
+            <div class="content">
+                <p>Children with significant cognitive impairment do well with just LA infiltration in port sites by surgeon.
+                    For older and developmentally normal patients consider unilateral subcostal TAP block for gastrostomy site
+                    as well as infiltration by surgeon in port wounds. Per Gastrostomy analgesia post-op- possible straight away
+                    on return to the ward.
+                </p>
+            </div>
+            <button type="button" class="collapsible"><b>Laparoscopic Fundoplication</b></button>
+            <div class="content">
+                <p>Oral analgesia post-op.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Stoma Closures</b></button>
+            <div class="content">
+                <p>USG TAP block rectus sheath or caudal and then NCA morphine or PR codeine for infants &lt5kg.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Midline Abdominal Incisions</b></button>
+            <div class="content">
+                <p>Infants &lt10 kg – single catheter in pre-peritoneal layer. Patients &gt10kg - rectus sheath catheters placed
+                    under direct vision by surgeons and then PCA/NCA.
+                </p>
+            </div>
+            <button type="button" class="collapsible"><b>Stoma Formation</b></button>
+            <div class="content">
+                <p>USG TAP if wound on side of stoma but if incision extends across midline do bilateral TAP or add in rectus sheath
+                    block plus PCA/NCA morphine or PR codeine for infants &lt 5kg.
+                </p>
+            </div>
+        </div>
+                                        
+        <!-- Plastic Surgery -->
+        <div id="plasticSurgery" class="tabcontent card">
+            <hr>
+            <h3>Plastic Surgery</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Syndactyly Release</b></button>
+            <div class="content">
+                <p>Discuss with surgeon whether they do wrist block or want you to do axillary BP block or USG median ulnar and
+                    radial nerve blocks in forearm.
+                </p>
+            </div>
+            <button type="button" class="collapsible"><b>Wrist Arthroscopy</b></button>
+            <div class="content">
+                <p>USG BP block.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Gynaecomastia Surgery with Breast Tissue Excision</b></button>
+            <div class="content">
+                <p>USG pec blocks.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Cleft Surgery</b></button>
+            <div class="content">
+                <p><b>Isolated cleft lip</b> – infraorbital nerve blocks by surgeon simple analgesia post-op sufficient.</p>
+                <p><b>Lip and vomerine flap</b> – IO by surgeon paracetamol ibuprofen and oramorph post-op on ward.</p>
+                <p><b>Cleft palate repair</b> – infiltration +/- blocks by surgeon intra-op paracetamol ibuprofen and oramorph
+                    post-op.</p>
+                <p><b>Pharyngoplasty</b> – post-op paracetamol ibuprofen and oramorph. Consider NCA first night if patient
+                    refusing oral meds.</p>
+                <p><b>Buccinator flap</b> – surgeon infiltrates cheek and palate. Regular paracetamol and ibuprofen prn
+                    oramorph.</p>
+                <p><b>Alveolar Bone Graft to palatal fistula</b> – Iliac crest bone graft harvested to fill palatal fistula.
+                    Surgeon will site a wound infiltration catheter as closing iliac wound for overnight infusion of LA via
+                    elastomeric pump. Oral analgesia sufficient for palatal wound.</p>
+            </div>
+        </div>
+                                        
+        <!-- ENT -->
+        <div id="ent" class="tabcontent card">
+            <hr>
+            <h3>ENT</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Adenotonsillectomy</b></button>
+            <div class="content">
+                <p>Regular paracetamol + ibuprofen (if no contraindication) and then prn oramorph 0.1mg/kg 6 hourly as TTO. If
+                    patients has severe OSA then only oramorph 0.05mg/kg as TTO or occasionally no oramorph at all if still
+                    significant obstructive symptoms post-op.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Tympanoplasty</b></button>
+            <div class="content">
+                <p>Surgeon infiltrates and blocks auricular nerves so post-op paracetamol +/- ibuprofen.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Cochlear Implants</b></button>
+            <div class="content">
+                <p>Surgeon infiltrates regular paracetamol and ibuprofen afterwards suffices.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Total Thyroidectomy</b></button>
+            <div class="content">
+                <p>Local infiltration by surgeon and oral analgesia usually sufficient.</p>
+            </div>
+        </div>
+        <!-- Eyes -->
+        <div id="eyes" class="tabcontent card">
+            <hr>
+            <h3>Eyes</h3>
+            <hr>
+            <p>Unlike adults, most children requiring ophthalmic surgery will need a general anaesthetic. Operations involving the eye
+                and orbit result in mild to moderate pain, which is well managed with topical anaesthetic agents and simple analgesics
+                (paracetamol and NSAIDs)
+            </p>
+            <p>Most children benefit from a level of sedation post operatively and strategies to reduce delirium. TIVA is ideal for
+                ophthalmic surgery in paediatrics. However, for squint surgery you may experience more bradycardias as the resting heart
+                rate is lower. If you decide to use cyclizine intraop the anticholinergic effect can be useful.
+            </p>
+            <button type="button" class="collapsible"><b>Brow Suspension Surgery</b></button>
+            <div class="content">
+                <p>The surgery is often well tolerated with simple analgesics and fentanyl.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Enucleation and Vitreo-retinal Surgery</b></button>
+            <div class="content">
+                <p><b>Avoid nitrous oxyide</b> - They are associated with more severe postoperative pain and may require intraoperative morphine and post
+                operative oromorph 0.1-0.2mg/kg 3 hourly.</p>
+                <p>Enucleations are often traumatic for the parents. A pre-med and gentle induction can help with these cases. Intra-op
+                morphine is required (0.05mg/Kg), but the children have a high incidence of PONV. Consider intra-op clonidine
+                0.5-1mcg/kg.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Squint Surgery</b></button>
+            <div class="content">
+                <p>Associated with a high incidence of postoperative nausea and vomiting. Double prophylactic antiemetic therapy intra-op
+                is standard. Simple analgesia combined with clonidine and a reduced dose of morphine (for two or more muscle
+                corrections) usually suffice.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Corneal Grafting</b></button>
+            <div class="content">
+                <p>The surgery requires a still eye. Muscular blockade, RAE tube and invasive ventilation provide ideal conditions. Care must be
+                taken to reduce IOP at the end of surgery (aim to avoid crying and coughing). These patients benefit from clonidine and
+                morphine.</p>
+            </div>
+            <button type="button" class="collapsible"><b>Oncology theatre (Retinoblastoma patients)</b></button>
+            <div class="content">
+                <p>This is a high turnover list. Paracetamol is sufficient for most procedures (Laser). If the surgeon uses cryo, then a
+                small dose of fentanyl/morphine will be beneficial.</p>
+            </div>
+        </div>
+        <!-- Neurosurgery -->
+        <div id="nsy" class="tabcontent card">
+            <hr>
+            <h3>Neurosurgery</h3>
+            <hr>
+            <button type="button" class="collapsible"><b>Craniotomies/Tumours</b></button>
+            <div class="content">
+               <p>Most Tumours will require regular paracetamol, PRN oral morphine and local anaesthetic infiltration. Surgeons are happy with NSAIDs on day 1 postop.
+            Regular ondansetron and PRN cyclizine. Clonidine can be given intra-op 1mcgr/Kg and continue PRN postop.
+            </p>
+            <p>
+                Post Fossa tumours will need NCA/PCA, Teenagers would benefit from Fentanyl or Fentanyl and Ketamine NCA/PCA
+            </p>
+            <p>
+                For sitting position, prolonged prone and positions where the head is turned to one side...children will benefit from
+                diazepam 0.1mg/kg 8 hourly PRN for muscle spasms
+            </p>
+            </div>
+            <button type="button" class="collapsible"><b>Shunts</b></button>
+            <div class="content">
+                <p>
+                    Tunnelling can be painful, and dose of fentanyl 1mcgr/kg intra-operatively is usually enough. Regular paracetamol,
+                    ibuprofen and PRN oral-morphine 0.1mg/kg 3 hourly is usually enough in the postop period
+                </p>
+            </div>
+            <button type="button" class="collapsible"><b>EVD</b></button>
+            <div class="content">
+               <p>
+                    Similar to VP shunts. There is no tunnelling involved, but a dose of fentanyl intra-op may be necessary.
+                    
+                    Regular paracetamol and ibuprofen prn postop if there are no contraindications, and very occasionally PO morphine
+                    0.1mg/kg 6 hourly PRN
+               </p>
+            </div>
+            <button type="button" class="collapsible"><b>Myelomeningocele</b></button>
+            <div class="content">
+                <p>
+                    Usually neonates. May be a prolonged surgery requiring plastic surgery involvement
+                    
+                    Intraop can be managed with remifentanil or fentanyl boluses.
+                    
+                    Postop: if more than 38 weeks gestational age. Regular paracetamol 10mg/Kg tds IV (15mg/kg qds PO/PR) and morphine NCA (consider no background infusion).
+                </p>
+            </div>
+        </div>
+    </main>
+                                        
+    <script src="script.js"></script>
+</body>
+                                        
+</html>
